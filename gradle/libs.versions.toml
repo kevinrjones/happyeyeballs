@@ -1,0 +1,16 @@
+[versions]
+catalogUpdateVersion_version = "0.8.1"
+junitVersion = "5.10.1"
+kotlin_couroutines_version = "1.7.3"
+kotlin_version = "1.9.21"
+updateVersion_version = "0.50.0"
+
+[libraries]
+jUnitEngine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junitVersion" }
+junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitVersion" }
+kotlinCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin_couroutines_version" }
+
+[plugins]
+catalogUpdate = { id = "nl.littlerobots.version-catalog-update", version.ref = "catalogUpdateVersion_version" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin_version" }
+versionUpdate = { id = "com.github.ben-manes.versions", version.ref = "updateVersion_version" }
